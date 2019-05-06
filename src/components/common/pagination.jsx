@@ -4,7 +4,6 @@ import _ from "lodash";
 
 const Pagination = props => {
   const { itemsCount, pageSize, currentPage, onPageChange } = props;
-  console.log(currentPage);
 
   const pagesCount = Math.ceil(itemsCount / pageSize);
 
@@ -19,7 +18,11 @@ const Pagination = props => {
             key={page}
             className={page === currentPage ? "page-item active" : "page-item"}
           >
-            <a onClick={() => onPageChange(page)} className="page-link">
+            <a
+              href="#"
+              onClick={() => onPageChange(page)}
+              className="page-link"
+            >
               {page}
             </a>
           </li>
